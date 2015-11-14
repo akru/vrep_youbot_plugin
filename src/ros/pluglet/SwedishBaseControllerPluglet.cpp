@@ -36,8 +36,8 @@ void SwedishBaseControllerPluglet::cmdCallback(
 
 	float factor = R;
 
-	float forwBackVel = msg->linear.x * factor;
-	float leftRightVel = -msg->linear.y * factor;
+	float forwBackVel = msg->linear.y * factor;
+	float leftRightVel = msg->linear.x * factor;
 	float rotVel = -msg->angular.z * factor;
 
 	float vel_wheel_0 = -forwBackVel - leftRightVel - rotVel;
